@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Разметка экрана Вход/Регистрация-->
+<!--FrameLayout может содержать только один элемент, обычно используется как контейнер-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorPrimary"
+    android:orientation="vertical"
+    tools:context=".view.login.LoginActivity">
+  <!--LinearLayout или его аналог из Compat выравнивает все дочерние объекты в одном направлении
+  в зависимости от свойства orientation. По умолчанию оно horizontal-->
+  <androidx.appcompat.widget.LinearLayoutCompat
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginHorizontal="5dp"
+      android:background="?colorOnPrimary"
+      android:orientation="vertical"
+      android:padding="20dp">
+    <!--Контейнер для фрагментов. Указываем статически имя
+    отображаемого фрагмента свойством
+    android:name="com.example.pcexample.view.login.SignInFragment" -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/sign_in_fragment"
+        android:name="com.example.pcexample.view.login.SignInFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <!--Второй контейнер для фрагментов. Указываем статически имя
+    отображаемого фрагмента свойством
+    android:name="com.example.pcexample.view.login.SignUpFragment" -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/sign_up_fragment"
+        android:name="com.example.pcexample.view.login.SignUpFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <!--Кнопка переключения фрагментов Вход/Регистрация
+    Строки берем из ресурсов. Для изменения внешнего вида кнопки применяем стили и темы-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_registration_switch_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/registration"
+        android:theme="@style/Theme.PCExample.Button.SignInUpSwitch"/>
+  </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

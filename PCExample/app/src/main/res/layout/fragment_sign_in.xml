@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Разметка для фрагмента входа в систему-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.login.SignInFragment">
+
+  <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/sign_in_login_edit_text"
+      style="@style/Theme.PCExample.EditText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/username"
+      android:inputType="text" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/sign_in_password_edit_text"
+      style="@style/Theme.PCExample.EditText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/password"
+      android:inputType="textPassword" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/sign_in_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="@string/sign_in"
+      android:theme="@style/Theme.PCExample.Button"/>
+  <ProgressBar
+      android:id="@+id/sign_in_progress_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      style="?android:attr/progressBarStyleHorizontal"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

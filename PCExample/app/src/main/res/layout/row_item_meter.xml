@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--Элемент списка устройств-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/ic_frame"
+    android:orientation="vertical">
+  <!--Имя устройства-->
+  <TextView
+      android:id="@+id/meter_name_text_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_margin="5dp"
+      android:background="?attr/colorPrimary"
+      android:gravity="center"
+      android:textColor="?attr/colorOnPrimary"
+      android:textSize="18sp" />
+
+  <!--Отображение показаний-->
+  <androidx.appcompat.widget.LinearLayoutCompat
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <!--Для выравнивания показаний по центру
+    создаем два пустых элемента с высотой как у контейнера, шириной 0dp и весом 1-->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/meter_indications_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/meter_indications_units_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/electric_active_energy_units"
+        android:textSize="32sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+  </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
